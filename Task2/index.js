@@ -1,16 +1,25 @@
 const handlebutton = () => {
-  let sidemenu = document.getElementById("sidemenu");
+  let button = document.getElementById("infoicon2");
+  console.log(button)
+  
+  if(button.classList.contains("rotateinfoicon2")){
+    let sidemenu = document.getElementById("sidemenu");
+    let hiddenicon = document.getElementById("hiddenicon");
+    sidemenu.classList.replace("sidemenu", "sidemenuToggle");
+    hiddenicon.style.display = "block";
+    button.classList.remove("rotateinfoicon2")
+  }else{
+    
+    button.classList.add("rotateinfoicon2")
+    let sidemenu = document.getElementById("sidemenu");
   let hiddenJourney = document.getElementById("hiddenJourney");
   let hiddenicon = document.getElementById("hiddenicon");
   sidemenu.classList.replace("sidemenuToggle", "sidemenu");
   hiddenicon.style.display = "none";
+  }
+  
 };
-const crossbutton = () => {
-  let sidemenu = document.getElementById("sidemenu");
-  let hiddenicon = document.getElementById("hiddenicon");
-  sidemenu.classList.replace("sidemenu", "sidemenuToggle");
-  hiddenicon.style.display = "block";
-};
+
 let asset_description = document.getElementsByClassName("span1");
 asset_description = Array.from(asset_description);
 let title = document.getElementsByClassName("titlehead");

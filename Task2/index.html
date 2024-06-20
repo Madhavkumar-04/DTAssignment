@@ -26,12 +26,28 @@
         display: flex;
         justify-content: flex-end;
         align-items: center;
+        padding-right: 4rem;
         width: 100%;
         /* max-width: 1440px; */
         height: 5.5rem;
         background-color: #f0f0f0;
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
         /* position: relative; */
+      }
+      .dotclass{
+        position: absolute;
+        top: 0.2rem;
+        right: .5rem;
+        width: 7.06px;
+height: 7.59px;
+gap: 0px;
+opacity: 0px;
+z-index: 100;
+background-color: #FF2C55;
+color: #FF2C55;
+border-radius: 10px;
+
+
       }
       .companyLogo {
         position: absolute;
@@ -92,11 +108,15 @@
       }
       .description122 {
         font-family: Poppins;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 21px;
-        letter-spacing: 0.02em;
-        color: rgba(0, 0, 0, 1);
+font-size: 14px;
+font-weight: 400;
+line-height: 21px;
+letter-spacing: 0.02em;
+text-align: left;
+color: #000000;
+
+
+
       }
       .wrapContainers {
         margin: 1rem auto;
@@ -123,6 +143,13 @@
         min-height: 5rem;
         padding: 1rem;
         align-items: center;
+        font-family: "Open Sans";
+font-size: 16px;
+font-weight: 600;
+line-height: 21.79px;
+letter-spacing: 0.02em;
+text-align: left;
+
       }
       .titlehead {
         width: 35vw;
@@ -146,13 +173,22 @@
         bottom: 1rem;
         right: 2rem;
       }
+      .infoicon2 {
+        position: absolute;
+        right: 1rem;
+        bottom: 0.5rem;
+      }
+      .rotateinfoicon2{
+        rotate: 180deg;
+      }
       .span1 {
-        font-family: "Open Sans";
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 19.07px;
-        letter-spacing: 0.02em;
-        text-align: left;
+        font-family: Open Sans;
+font-size: 14px;
+font-weight: 400;
+line-height: 19.07px;
+letter-spacing: 0.02em;
+text-align: left;
+
       }
       .span2 {
         font-family: Poppins;
@@ -514,7 +550,7 @@
       }
       .rotate {
         position: absolute;
-        top: 2.5rem;
+        top: 4.25rem;
         right: -28rem;
         rotate: -90deg;
       }
@@ -539,7 +575,7 @@
       }
       .sidemenuToggle {
         position: absolute;
-        left: -23rem;
+        left: -28rem;
         top: 5.6rem;
       }
       .hiddenJourney {
@@ -603,7 +639,10 @@
             width="30px"
             class="setting_icon"
           />
-          <img
+         
+          <div 
+          style="position: relative;">
+            <img
             src="Vectornoti.svg"
             loading="lazy"
             alt=""
@@ -611,6 +650,9 @@
             width="31.15px"
             class="notification_icon"
           />
+          <div class="dotclass"></div>
+          </div>
+          
           <img
             src="Ellipse 53girl.png"
             loading="lazy"
@@ -801,7 +843,10 @@
       <img loading="lazy" src="schedule (1) 1schedule.png" alt="" />
     </div>
     <div class="sidemenuToggle containers" id="sidemenu">
-      <div class="titlehead">Journey Board</div>
+      <div class="titlehead">Journey Board <button
+        onclick="handlebutton()"
+        style="background: rgba(0, 0, 0, 1); border: none"
+      ><img loading="lazy" class="infoicon2" id="infoicon2" src="Screenshot from 2024-06-19 11-58-44 1leftarrowside.png" /></button></div>
       <div class="hiddenJourney" id="hiddenJourney">
         <ul>
           <li
@@ -829,7 +874,6 @@
           style="background: rgba(253, 253, 253, 1)"
         >
           <button
-            onclick="handlebutton()"
             style="background: rgba(253, 253, 253, 1); border: none"
           >
             <div class="backgroundimage">1</div>
